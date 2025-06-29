@@ -29,8 +29,9 @@ routes.post('/pay-now', async (req, res) => {
       mode: 'payment',
 
       // Redirect back to backend first, then backend forwards to frontend
-      success_url: 'https://stripe-backend-k7a0.onrender.com/stripe-success',
-      cancel_url: 'https://stripe-backend-k7a0.onrender.com/stripe-cancel',
+   success_url: 'https://stripe-frontend-sooty.vercel.app/success?status=success',
+cancel_url: 'https://stripe-frontend-sooty.vercel.app/cancel?status=cancel',
+
     });
 
     res.json({ url: session.url });
