@@ -26,8 +26,9 @@ routes.post('/pay-now', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://localhost:5173/success',
-      cancel_url: 'http://localhost:5173/cancel',
+      // vercel url 
+      success_url: 'https://stripe-frontend-sooty.vercel.app/success',
+      cancel_url: 'https://stripe-frontend-sooty.vercel.app/cancel',
     });
 
     res.json({ url: session.url });
